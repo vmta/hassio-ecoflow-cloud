@@ -85,6 +85,14 @@ DC_CHARGE_CURRENT_OPTIONS = {
     "8A": 8000
 }
 
+PV_CHARGE_CURRENT_OPTIONS = {
+    "4A": 4000,
+    "5A": 5000,
+    "6A": 6000,
+    "7A": 7000,
+    "8A": 8000
+}
+
 MAIN_MODE_OPTIONS = {
     "Cool": 0,
     "Heat": 1,
@@ -156,10 +164,14 @@ SOLAR_1_IN_VOLTS = "Solar (1) In Volts"
 SOLAR_2_IN_VOLTS = "Solar (2) In Volts"
 SOLAR_1_IN_AMPS = "Solar (1) In Amps"
 SOLAR_2_IN_AMPS = "Solar (2) In Amps"
+SOLAR_1_IN_ENERGY = "Solar (1) In Energy"
+SOLAR_2_IN_ENERGY = "Solar (2) In Energy"
 AC_IN_POWER = "AC In Power"
 AC_IN_VOLT = "AC In Volts"
 DC_BATTERY_POWER = "DC Battery Power"
 AC_OUT_VOLT = "AC Out Volts"
+AC1_OUT_VOLT = "AC1 Out Volts"
+AC2_OUT_VOLT = "AC2 Out Volts"
 
 TYPE_C_IN_POWER = "Type-C In Power"
 SOLAR_IN_CURRENT = "Solar In Current"
@@ -172,6 +184,8 @@ DISCHARGE_DC_ENERGY = "Battery Discharge Energy to DC"
 
 TOTAL_OUT_POWER = "Total Out Power"
 AC_OUT_POWER = "AC Out Power"
+AC1_OUT_POWER = "AC1 Out Power"  
+AC2_OUT_POWER = "AC2 Out Power"
 DC_OUT_POWER = "DC Out Power"
 DC_OUT_VOLTAGE = "DC Out Voltage"
 DC_CAR_OUT_POWER = "DC Car Out Power"
@@ -239,6 +253,7 @@ UNIT_TIMEOUT = "Unit Timeout"
 AC_TIMEOUT = "AC Timeout"
 DC_TIMEOUT = "DC (12V) Timeout"
 DC_CHARGE_CURRENT = "DC (12V) Charge Current"
+PV_CHARGE_CURRENT = "PV Charge Current"
 GEN_AUTO_START_LEVEL = "Generator Auto Start Level"
 GEN_AUTO_STOP_LEVEL = "Generator Auto Stop Level"
 GEN_BAT_CHARGING_POWER = "Generator Battery Charging Power"

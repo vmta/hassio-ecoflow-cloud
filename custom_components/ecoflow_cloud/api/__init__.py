@@ -94,7 +94,14 @@ class EcoflowApiClient(ABC):
         if isinstance(command, dict):
             command = JSONMessage(command)
 
+        # Update device target state first
         self.devices[device_sn].data.update_to_target_state(mqtt_state)
+
+        # Defensive: command builders may return None when a field is unknown.
+        if command is None:
+            _LOGGER.error("Attempted to send set message but command is None for device %s", device_sn)
+            return
+
         self.mqtt_client.publish(self.devices[device_sn].device_info.set_topic, command.to_mqtt_payload())
 
     def start(self):
