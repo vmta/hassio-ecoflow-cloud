@@ -78,7 +78,11 @@ class EcoflowPrivateApiClient(EcoflowApiClient):
             target_devices = {device_sn: self.devices[device_sn]}
 
         for sn, device in target_devices.items():
-            self.send_get_message(sn, device.get_quota_message())
+            try:
+                self.send_get_message(sn, device.get_quota_message())
+            except Exception as exception:
+                _LOGGER.error(exception, exc_info=True)
+                _LOGGER.error("Error retrieving %s", sn)
 
     def configure_device(self, device_data: DeviceData):
         if device_data.parent is not None:
